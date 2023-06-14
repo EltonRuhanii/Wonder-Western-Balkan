@@ -50,8 +50,10 @@ extension AccountSetupViewController {
     }
     
     @IBAction func CrateAccountButtonPressed(_ sender: Any) {
-        if let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
-            self.navigationController?.pushViewController(homeVC, animated: true)
+        if let registerCompleted = storyboard?.instantiateViewController(withIdentifier: "RegisterCompletedViewController") as? RegisterCompletedViewController {
+            registerCompleted.usernameLabel = usernameTextfield.text ?? ""
+            self.navigationController?.pushViewController(registerCompleted, animated: true)
+            
         }
     }
     

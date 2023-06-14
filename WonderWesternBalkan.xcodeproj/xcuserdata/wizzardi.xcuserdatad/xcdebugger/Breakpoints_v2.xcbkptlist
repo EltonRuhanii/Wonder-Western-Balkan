@@ -7,17 +7,109 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B86475E1-AFB3-4A01-8084-1866D874F322"
-            shouldBeEnabled = "Yes"
+            uuid = "0CC168A9-CA2E-4CF5-A796-0DE073E90609"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WonderWesternBalkan/ViewControllers/RegisterCompletedViewController.swift"
+            filePath = "WonderWesternBalkan/ViewControllers/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "traitCollectionDidChange(_:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0CC168A9-CA2E-4CF5-A796-0DE073E90609 - f68244658fceadf4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.HomeViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wizzardi/Developer/iOS/WonderWesternBalkan/Wonder-Westen-Balkan/WonderWesternBalkan/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "206">
+               </Location>
+               <Location
+                  uuid = "0CC168A9-CA2E-4CF5-A796-0DE073E90609 - f68244658fceadf4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.HomeViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wizzardi/Developer/iOS/WonderWesternBalkan/Wonder-Westen-Balkan/WonderWesternBalkan/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "621">
+               </Location>
+               <Location
+                  uuid = "0CC168A9-CA2E-4CF5-A796-0DE073E90609 - f68244658fcead36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.HomeViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wizzardi/Developer/iOS/WonderWesternBalkan/Wonder-Westen-Balkan/WonderWesternBalkan/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "199">
+               </Location>
+               <Location
+                  uuid = "0CC168A9-CA2E-4CF5-A796-0DE073E90609 - f68244658fcead36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.HomeViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wizzardi/Developer/iOS/WonderWesternBalkan/Wonder-Westen-Balkan/WonderWesternBalkan/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "614">
+               </Location>
+               <Location
+                  uuid = "0CC168A9-CA2E-4CF5-A796-0DE073E90609 - f68244658fceacfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.HomeViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wizzardi/Developer/iOS/WonderWesternBalkan/Wonder-Westen-Balkan/WonderWesternBalkan/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  uuid = "0CC168A9-CA2E-4CF5-A796-0DE073E90609 - f68244658fceacfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.HomeViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wizzardi/Developer/iOS/WonderWesternBalkan/Wonder-Westen-Balkan/WonderWesternBalkan/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "457">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

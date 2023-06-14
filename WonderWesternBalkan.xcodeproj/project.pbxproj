@@ -21,6 +21,9 @@
 		5DA006DD2A37CC9C0085D898 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006DC2A37CC9C0085D898 /* Database.swift */; };
 		5DA006E12A37CD2D0085D898 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006DF2A37CD2D0085D898 /* CountryCell.swift */; };
 		5DA006E22A37CD2D0085D898 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA006E02A37CD2D0085D898 /* CountryCell.xib */; };
+		5DA006E52A3918730085D898 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006E32A3918730085D898 /* LocationCell.swift */; };
+		5DA006E62A3918730085D898 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA006E42A3918730085D898 /* LocationCell.xib */; };
+		5DA006E82A391BB20085D898 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006E72A391BB20085D898 /* CountryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		5DA006DC2A37CC9C0085D898 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		5DA006DF2A37CD2D0085D898 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		5DA006E02A37CD2D0085D898 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		5DA006E32A3918730085D898 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		5DA006E42A3918730085D898 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
+		5DA006E72A391BB20085D898 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				5DA006D42A37193A0085D898 /* TermsViewController.swift */,
 				5DA006D62A3731A80085D898 /* RegisterCompletedViewController.swift */,
 				5DA006D02A3717B60085D898 /* HomeViewController.swift */,
+				5DA006E72A391BB20085D898 /* CountryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +150,8 @@
 			children = (
 				5DA006DF2A37CD2D0085D898 /* CountryCell.swift */,
 				5DA006E02A37CD2D0085D898 /* CountryCell.xib */,
+				5DA006E32A3918730085D898 /* LocationCell.swift */,
+				5DA006E42A3918730085D898 /* LocationCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -205,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA006E62A3918730085D898 /* LocationCell.xib in Resources */,
 				5DA006E22A37CD2D0085D898 /* CountryCell.xib in Resources */,
 				5DA006C32A368ABA0085D898 /* LaunchScreen.storyboard in Resources */,
 				5DA006C02A368ABA0085D898 /* Assets.xcassets in Resources */,
@@ -225,8 +235,10 @@
 				5DA006DA2A37CC480085D898 /* CountryModel.swift in Sources */,
 				5DA006D72A3731A80085D898 /* RegisterCompletedViewController.swift in Sources */,
 				5DA006CF2A3711AE0085D898 /* AccountSetupViewController.swift in Sources */,
+				5DA006E52A3918730085D898 /* LocationCell.swift in Sources */,
 				5DA006B92A368AB70085D898 /* SceneDelegate.swift in Sources */,
 				5DA006DD2A37CC9C0085D898 /* Database.swift in Sources */,
+				5DA006E82A391BB20085D898 /* CountryViewController.swift in Sources */,
 				5DA006D52A37193A0085D898 /* TermsViewController.swift in Sources */,
 				5DA006D12A3717B60085D898 /* HomeViewController.swift in Sources */,
 			);

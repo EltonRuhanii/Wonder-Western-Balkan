@@ -13,17 +13,19 @@ class RegisterCompletedViewController: UIViewController {
     @IBOutlet weak var profilePhoto: UIView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var exploreButton: UIButton!
-    
+    // variables
     let gradientLayer = CAGradientLayer()
     var topColor: CGColor?
     var middleColor: CGColor?
     var bottomColor: CGColor?
+    var usernameLabel: String = ""
     
     // MARK: - BODY
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradient()
         setupUI()
+        username.text = usernameLabel
     }
     
     
@@ -38,6 +40,14 @@ class RegisterCompletedViewController: UIViewController {
                setupGradinetColors()
            }
        }
+    
+    @IBAction func explorePressed(_ sender: Any) {
+        if let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+            homeVC.usernameLabel = usernameLabel
+            navigationController?.pushViewController(homeVC, animated: true)
+        }
+    }
+    
 }
 
 // MARK: - FUNCTIONS
@@ -46,6 +56,7 @@ extension RegisterCompletedViewController {
         profilePhoto.layer.cornerRadius = profilePhoto.frame.width / 2
         profilePhoto.layer.borderWidth = 2
         profilePhoto.layer.borderColor = UIColor(named: "Text")?.cgColor
+        exploreButton.layer.cornerRadius = 25
     }
     
     func setupGradinetColors() {

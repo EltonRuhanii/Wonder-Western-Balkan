@@ -14,11 +14,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let countriesModel: [CountryModel] = Database().countries
+    var usernameLabel: String = ""
     
     // MARK: - BODY
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationHelper.hideNavigationBar(self)
+        username.text = usernameLabel
         setupCollectionView()
     }
     
@@ -28,6 +30,8 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func setupCollectionView() {
         collectionView.register(UINib(nibName: "CountryCell", bundle: nil), forCellWithReuseIdentifier: "CountryCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,5 +57,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let width = self.view.frame.width * 0.7
         let height = width * 2
         return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let countryVC = storyboard?.instantiateViewController(withIdentifier: "CountryViewController") as? CountryViewController {
+            let location = countriesModel[indexPath.item]
+            if location.locationModel == "kosovaLocations" {
+                countryVC.locationModel = Database().kosovaLocations
+                
+            } else if location.locationModel == "albaniaLocations" {
+                countryVC.locationModel = Database().albaniaLocations
+            }
+            navigationController?.pushViewController(countryVC, animated: true)
+        }
     }
 }

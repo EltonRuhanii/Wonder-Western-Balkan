@@ -13,4 +13,14 @@ struct CountryModel {
     var city: String
     var country: String
     var destinations: Int
+    var locationModel: String
+}
+
+struct LocationModel {
+    var locationPhoto: String
+    var city: String
+    var country: String
+    var name1: String
+    var name2: String
+    var description: String
 }
