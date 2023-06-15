@@ -67,6 +67,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 
             } else if location.locationModel == "albaniaLocations" {
                 countryVC.locationModel = Database().albaniaLocations
+            } else if location.locationModel == "macedoniaLocations" {
+                countryVC.locationModel = Database().macedoniaLocations
             }
             navigationController?.pushViewController(countryVC, animated: true)
         }

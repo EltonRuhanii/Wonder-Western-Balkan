@@ -16,7 +16,7 @@ class Database {
         CountryModel(rating: 4.7, isFavorited: false, city: "Podgorica", country: "Montenegro", destinations: 5, locationModel: "montegroLocations")]
     
     // MARK: - LOCATIONS
-    // Kosovo
+    // KOSOVO
     var kosovaLocations: [LocationModel] = [
     LocationModel(locationPhoto: "Prishtina Mall", city: "PRISHTINA", country: "Kosova", name1: "Prishtina", name2: "Mall", description: "Biggest mall in the balkan"),
     LocationModel(locationPhoto: "Germia", city: "PRISHTINA", country: "Kosova", name1: "Germia", name2: "Park", description: "Grand park of Prishtina"),
@@ -36,4 +36,11 @@ class Database {
     LocationModel(locationPhoto: "Tirana", city: "Tirana", country: "Albania", name1: "", name2: "Tirana", description: "Capital city"),
     LocationModel(locationPhoto: "Mrizi i Zanave", city: "Lezhë", country: "Albania", name1: "Mrizi", name2: "Zanave", description: "Traditional food restaurant"),
     ]
+    
+    // MACEDONIA
+    var macedoniaLocations: [LocationModel] = [
+    LocationModel(locationPhoto: "SkopjeC", city: "Skopje", country: "North Macedonia", name1: "", name2: "Skopje", description: "Capital City"),
+    LocationModel(locationPhoto: "Ohrid", city: "Ohrid", country: "North Macedonia", name1: "", name2: "Ohrid", description: "Lake side city"),
+    LocationModel(locationPhoto: "Matka", city: "", country: "North Macedonia", name1: "Matka", name2: "Canyon", description: "Large canyon"),
+    LocationModel(locationPhoto: "Zoo", city: "Skopje", country: "North Macedonia", name1: "City", name2: "Zoo", description: "Large zoo in capital city")]
 }
