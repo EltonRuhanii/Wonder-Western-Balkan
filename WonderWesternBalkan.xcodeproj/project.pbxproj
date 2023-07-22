@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3B24882A53346100D06C34 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B24872A53346100D06C34 /* ExploreViewController.swift */; };
 		5DA006B72A368AB70085D898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006B62A368AB70085D898 /* AppDelegate.swift */; };
 		5DA006B92A368AB70085D898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006B82A368AB70085D898 /* SceneDelegate.swift */; };
 		5DA006BE2A368AB70085D898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA006BC2A368AB70085D898 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D3B24872A53346100D06C34 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		5DA006B32A368AB70085D898 /* WonderWesternBalkan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderWesternBalkan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA006B62A368AB70085D898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA006B82A368AB70085D898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				5DA006D62A3731A80085D898 /* RegisterCompletedViewController.swift */,
 				5DA006D02A3717B60085D898 /* HomeViewController.swift */,
 				5DA006E72A391BB20085D898 /* CountryViewController.swift */,
+				5D3B24872A53346100D06C34 /* ExploreViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				5DA006B92A368AB70085D898 /* SceneDelegate.swift in Sources */,
 				5DA006DD2A37CC9C0085D898 /* Database.swift in Sources */,
 				5DA006E82A391BB20085D898 /* CountryViewController.swift in Sources */,
+				5D3B24882A53346100D06C34 /* ExploreViewController.swift in Sources */,
 				5DA006D52A37193A0085D898 /* TermsViewController.swift in Sources */,
 				5DA006D12A3717B60085D898 /* HomeViewController.swift in Sources */,
 			);

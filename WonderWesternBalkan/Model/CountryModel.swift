@@ -14,6 +14,7 @@ struct CountryModel {
     var country: String
     var destinations: Int
     var locationModel: String
+//    var historyModel: CountryHistoryModel
 }
 
 struct LocationModel {
@@ -23,4 +24,28 @@ struct LocationModel {
     var name1: String
     var name2: String
     var description: String
+}
+
+struct CountryHistoryModel {
+    var photo: String
+    var rating: Double
+    var country: String
+    var description: String
+    var price: Int
+}
+
+struct CountryLocationModel {
+    var locationX: Double
+    var locationY: Double
+}
+
+struct ReviewModel {
+    var profilePhoto: String
+    var name: String
+    var date: String
+    var review: String
+}
+
+struct GalleryModel {
+    var photo: String
 }
