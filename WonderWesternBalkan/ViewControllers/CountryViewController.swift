@@ -20,14 +20,17 @@ class CountryViewController: UIViewController {
     var topColor: CGColor?
     var middleColor: CGColor?
     var bottomColor: CGColor?
+    var country: LocationCountry = .kosovo
+    var categroy: LocationCategory = .beach
+    var countryImageName: String = ""
     
-    var locationModel: [LocationModel] = []
     
     // MARK: - BODY
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradient()
         setupCollectionView()
+        setupUIElements()
     }
     
     /// This function will change gradient colors when screen apparance is toggled
@@ -67,8 +70,12 @@ extension CountryViewController {
         setupGradinetColors()
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
-        
+//        countryImage.image = UIImage(named: country)
         countryImage.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func setupUIElements() {
+        countryImage.image = UIImage(named: countryImageName)
     }
 }
 
@@ -78,21 +85,19 @@ extension CountryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return locationModel.count
+        let location = Database().getLocationsCountry(country: country)
+        
+        return location.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LocationCell", for: indexPath) as! LocationCell
         
-        let location = locationModel[indexPath.item]
+        let location = Database().getLocationsCountry(country: country)[indexPath.item]
         
-        cell.cityImage.image = UIImage(named: location.locationPhoto)
-        cell.cityLabel.text = location.city
-        cell.countryLabel.text = location.country
-        cell.locationName1.text = location.name1
-        cell.locationName2.text = location.name2
-        cell.descriptionLabel.text = location.description
-        
+        cell.locationName1.text = location.locationLabel
+        cell.cityImage.image = UIImage(named: location.locationLabel)
+
         return cell
     }
     
@@ -101,4 +106,5 @@ extension CountryViewController: UICollectionViewDelegate, UICollectionViewDataS
         let height = width * 2
         return CGSize(width: width, height: height)
     }
+    
 }

@@ -18,7 +18,7 @@
 		5DA006D32A3718690085D898 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006D22A3718690085D898 /* NavigationHelper.swift */; };
 		5DA006D52A37193A0085D898 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006D42A37193A0085D898 /* TermsViewController.swift */; };
 		5DA006D72A3731A80085D898 /* RegisterCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006D62A3731A80085D898 /* RegisterCompletedViewController.swift */; };
-		5DA006DA2A37CC480085D898 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006D92A37CC480085D898 /* CountryModel.swift */; };
+		5DA006DA2A37CC480085D898 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006D92A37CC480085D898 /* Country.swift */; };
 		5DA006DD2A37CC9C0085D898 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006DC2A37CC9C0085D898 /* Database.swift */; };
 		5DA006E12A37CD2D0085D898 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006DF2A37CD2D0085D898 /* CountryCell.swift */; };
 		5DA006E22A37CD2D0085D898 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA006E02A37CD2D0085D898 /* CountryCell.xib */; };
@@ -41,7 +41,7 @@
 		5DA006D22A3718690085D898 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
 		5DA006D42A37193A0085D898 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		5DA006D62A3731A80085D898 /* RegisterCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompletedViewController.swift; sourceTree = "<group>"; };
-		5DA006D92A37CC480085D898 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		5DA006D92A37CC480085D898 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		5DA006DC2A37CC9C0085D898 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		5DA006DF2A37CD2D0085D898 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		5DA006E02A37CD2D0085D898 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				5DA006D82A37CBBD0085D898 /* Helpers */,
 				5DA006DB2A37CC870085D898 /* Data */,
 				5DA006CB2A3711680085D898 /* Model */,
-				5DA006CA2A3711630085D898 /* UI */,
+				5DA006CA2A3711630085D898 /* View */,
 				5DA006CC2A3711810085D898 /* ViewControllers */,
 				5DA006CD2A37118D0085D898 /* Resources */,
 				5DA006C42A368ABA0085D898 /* Info.plist */,
@@ -93,20 +93,20 @@
 			path = WonderWesternBalkan;
 			sourceTree = "<group>";
 		};
-		5DA006CA2A3711630085D898 /* UI */ = {
+		5DA006CA2A3711630085D898 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5DA006BC2A368AB70085D898 /* Main.storyboard */,
 				5DA006C12A368ABA0085D898 /* LaunchScreen.storyboard */,
 				5DA006DE2A37CD160085D898 /* Xib */,
 			);
-			path = UI;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5DA006CB2A3711680085D898 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5DA006D92A37CC480085D898 /* CountryModel.swift */,
+				5DA006D92A37CC480085D898 /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 				5DA006D32A3718690085D898 /* NavigationHelper.swift in Sources */,
 				5DA006B72A368AB70085D898 /* AppDelegate.swift in Sources */,
 				5DA006E12A37CD2D0085D898 /* CountryCell.swift in Sources */,
-				5DA006DA2A37CC480085D898 /* CountryModel.swift in Sources */,
+				5DA006DA2A37CC480085D898 /* Country.swift in Sources */,
 				5DA006D72A3731A80085D898 /* RegisterCompletedViewController.swift in Sources */,
 				5DA006CF2A3711AE0085D898 /* AccountSetupViewController.swift in Sources */,
 				5DA006E52A3918730085D898 /* LocationCell.swift in Sources */,

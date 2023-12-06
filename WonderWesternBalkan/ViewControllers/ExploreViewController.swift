@@ -23,6 +23,9 @@ class ExploreViewController: UIViewController {
     var middleColor: CGColor?
     var bottomColor: CGColor?
     
+    // Models
+    var locationModel = Location.self
+    
     // MARK: - BODY
     override func viewDidLoad() {
         super.viewDidLoad()

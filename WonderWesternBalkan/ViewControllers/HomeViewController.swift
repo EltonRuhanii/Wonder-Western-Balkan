@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let countriesModel: [CountryModel] = Database().countries
+    let countriesModel: [Country] = Database().countries
     var usernameLabel: String = ""
     
     // MARK: - BODY
@@ -43,12 +43,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let countryModel = countriesModel[indexPath.item]
         
-        cell.image.image = UIImage(named: countryModel.city)
+        cell.image.image = UIImage(named: countryModel.countryPhoto + "C")
         cell.rating.text = "\(countryModel.rating)"
-        cell.capitalCity.text = countryModel.city
-        cell.countryFlag.image = UIImage(named: countryModel.country)
-        cell.countryLabel.text = countryModel.country
-        cell.numberOfDestinations.text = "+ \(countryModel.destinations)"
+        cell.capitalCity.text = "Capital City"
+        cell.countryFlag.image = UIImage(named: countryModel.countryName)
+        cell.countryLabel.text = countryModel.countryName
+        cell.numberOfDestinations.text = "+ \(countryModel.noOfLocations)"
         
         return cell
     }
@@ -62,13 +62,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let countryVC = storyboard?.instantiateViewController(withIdentifier: "CountryViewController") as? CountryViewController {
             let location = countriesModel[indexPath.item]
-            if location.locationModel == "kosovaLocations" {
-                countryVC.locationModel = Database().kosovaLocations
-                
-            } else if location.locationModel == "albaniaLocations" {
-                countryVC.locationModel = Database().albaniaLocations
-            } else if location.locationModel == "macedoniaLocations" {
-                countryVC.locationModel = Database().macedoniaLocations
+            if location.countryLocations == "kosovaLocations" {
+                countryVC.country = .kosovo
+                countryVC.countryImageName = "KosovaC"
+            } else if location.countryLocations == "albaniaLocations" {
+                countryVC.country = .albania
+                countryVC.countryImageName = "AlbaniaC"
+            } else if location.countryLocations == "macedoniaLocations" {
+                countryVC.country = .northMacedonia
+                countryVC.countryImageName = "MacedoniaC"
+            } else {
+                countryVC.country = .montenegro
+                countryVC.countryImageName = "MontenegroC"
             }
             navigationController?.pushViewController(countryVC, animated: true)
         }

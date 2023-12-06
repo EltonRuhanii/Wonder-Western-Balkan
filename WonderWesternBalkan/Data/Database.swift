@@ -6,41 +6,91 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Database {
     // MARK: - COUNTRIES
-    var countries: [CountryModel] = [
-        CountryModel(rating: 4.9, isFavorited: false, city: "Prishtina", country: "Kosova", destinations: 9, locationModel: "kosovaLocations"),
-        CountryModel(rating: 4.5, isFavorited: false, city: "Tirana", country: "Albania", destinations: 8, locationModel: "albaniaLocations"),
-        CountryModel(rating: 4.3, isFavorited: false, city: "Skopje", country: "North Macedonia", destinations: 5, locationModel: "macedoniaLocations"),
-        CountryModel(rating: 4.7, isFavorited: false, city: "Podgorica", country: "Montenegro", destinations: 5, locationModel: "montegroLocations")]
+    var countries: [Country] = [
+        Country(rating: 4.7, noOfLocations: 5, countryName: "Kosova", countryPhoto: "Kosova", countryLocations: "kosovaLocations"),
+        Country(rating: 4.8, noOfLocations: 4, countryName: "Albania", countryPhoto: "Albania", countryLocations: "albaniaLocations"),
+        Country(rating: 4.3, noOfLocations: 4, countryName: "Montenegro", countryPhoto: "Montenegro", countryLocations: "montengroLocations"),
+        Country(rating: 4.0, noOfLocations: 3, countryName: "North Macedonia", countryPhoto: "Macedonia", countryLocations: "macedoniaLocations")
+    ]
     
     // MARK: - LOCATIONS
-    // KOSOVO
-    var kosovaLocations: [LocationModel] = [
-    LocationModel(locationPhoto: "Prishtina Mall", city: "PRISHTINA", country: "Kosova", name1: "Prishtina", name2: "Mall", description: "Biggest mall in the balkan"),
-    LocationModel(locationPhoto: "Germia", city: "PRISHTINA", country: "Kosova", name1: "Germia", name2: "Park", description: "Grand park of Prishtina"),
-    LocationModel(locationPhoto: "Marble Cave", city: "GADIME", country: "Kosova", name1: "Marble", name2: "Cave", description: "1260m deep marble cave"),
-    LocationModel(locationPhoto: "Rugova", city: "PEJA", country: "Kosova", name1: "", name2: "Rugova", description: "Mountain trails"),
-    LocationModel(locationPhoto: "Prizren", city: "PRIZREN", country: "Kosova", name1: "", name2: "Prizren", description: "Old town of Kosova"),
-    LocationModel(locationPhoto: "Venom", city: "PRISHTINA", country: "Kosova", name1: "Venom", name2: "Club", description: "Night club"),
-    LocationModel(locationPhoto: "Prekaz", city: "PREKAZ", country: "Kosova", name1: "Jashari", name2: "Complex", description: "A historic comples in Prekaz")
-    ]
+    private let allLocations: [Location] = [
+        Location(
+            category: .cities,
+            country: .kosovo,
+            locationLabel: "Prishtina",
+            countryLabel: "Kosovo", 
+            historyLabel: "Capital city of Kosovo. A good place for relax time. A lot of restaurants and lounge bar’s for a fun night out with friends. Welcoming culture for tourists."),
+        Location(
+            category: .cities,
+            country: .albania,
+            locationLabel: "Grand Park",
+            countryLabel: "Albania",
+            historyLabel: "Grand Park of Tirana is 289 hectare public park situated in the capital city of Albania. With its greenery and a gorgeous lake. It’s a park for families to hangout and have a picnic in the summer."),
+        Location(
+            category: .cities,
+            country: .northMacedonia,
+            locationLabel: "Skopje",
+            countryLabel: "N. Macedonia",
+            historyLabel: "Skopje, the capital and largest city of North Macedonia, is a vibrant and dynamic metropolis that seamlessly blends history, culture, and modernity. Nestled along the Vardar River and surrounded by mountainous landscapes, Skopje has been a crossroads of civilizations for centuries, resulting in a rich tapestry of influences visible in its architecture, cuisine, and traditions."),
+        Location(
+            category: .beach,
+            country: .montenegro,
+            locationLabel: "Budva",
+            countryLabel: "Montenegro",
+            historyLabel: "Budva, situated on the Adriatic coast of Montenegro, is a captivating coastal town celebrated for its historic charm and vibrant atmosphere. With its well-preserved medieval Old Town, Budva showcases narrow cobblestone streets, ancient walls, and picturesque squares. The town is famous for its beautiful beaches, including the popular Mogren Beach and the iconic Sveti Stefan island-hotel. Budva's dynamic nightlife, diverse dining options, and cultural festivals make it a sought-after destination for tourists looking to explore the rich history and lively energy of the Montenegrin coast."),
+        Location(
+            category: .beach,
+            country: .albania,
+            locationLabel: "Green Coast",
+            countryLabel: "Albania",
+            historyLabel: "A private coast line neighbourhood with over then 50 houses. A blue coast line sea, located in Dhermi, Albania. It’s a must visit if you’re wanting a private time with our family/friends in your villa."),
+        Location(
+            category: .beach,
+            country: .albania,
+            locationLabel: "Three Islands",
+            countryLabel: "Albania",
+            historyLabel: "Three Islands are located in Ksamil, Albania. A crystal clear sea, with many beaches around three islands on the centre. Also Blue eye is near it so if you’re a fan of sea you must visit it."),
+        Location(
+            category: .mountains,
+            country: .kosovo,
+            locationLabel: "Rugova",
+            countryLabel: "Kosovo",
+            historyLabel: "Rugova is known for its stunning natural beauty, Rugova is characterised by majestic mountains, pristine landscapes, and picturesque valleys. Breathtaking canyons make it a must visit if you’re visiting Kosovo."),
+        Location(
+            category: .mountains,
+            country: .kosovo,
+            locationLabel: "Brezovice",
+            countryLabel: "Kosovo",
+            historyLabel: "Brezovica is a renowned ski resort situated in the Star Mountains. This picturesque destination is celebrated for its exceptional nature beauty and offer a winter wonderland for outdoor enthusiasts. Brezovia is a haven for skiing and snowboarding enthusiasts, with its slopes attracting visitors from near and far."),
+        Location(
+            category: .mountains,
+            country: .albania,
+            locationLabel: "Valbona",
+            countryLabel: "Albania",
+            historyLabel: "Valbona National Park is one of the most enchanting and pristine natural landscapes in Albania. This national park is renowned for its breathtaking alpine scenery, dense forests, and crystal-clear rivers. It encompasses the Valbona Valley, a picturesque glacial valley surrounded by high mountain peaks, including the stunning Accursed Mountains"),
+        Location(
+            category: .mountains, 
+            country: .northMacedonia,
+            locationLabel: "Mavrovo",
+            countryLabel: "N. Macedonia",
+            historyLabel: "Mavrovo, located in the western part of North Macedonia, is a serene region renowned for its stunning Mavrovo National Park. This area is characterized by picturesque landscapes, including the artificial Mavrovo Lake, surrounded by mountains. The national park offers outdoor activities such as hiking, skiing, and wildlife observation. Mavrovo also features traditional villages, providing a tranquil retreat with a distinct blend of nature and culture."),
+        Location(
+            category: .nightlife,
+            country: .kosovo,
+            locationLabel: "Venom",
+            countryLabel: "Kosovo",
+            historyLabel: "Venom is one of the biggest Night clubs in Kosovo, offering an awesome nightlife. With artist from all over the world. Big area, awesome music, and delicious cocktail’s. If you’re a nightlife person it’s a must visit club."),
+        Location(category: .nightlife, country: .albania, locationLabel: "Blloku", countryLabel: "Albania", historyLabel: "asds"),
+        Location(category: .nightlife, country: .montenegro, locationLabel: "Small Beach", countryLabel: "Montenegro", historyLabel: "dad")]
     
-    // ALBANIA
-    var albaniaLocations: [LocationModel] = [
-    LocationModel(locationPhoto: "Grand Park", city: "Tirana", country: "Albania", name1: "Grand", name2: "Park", description: "Grand park of Tirana"),
-    LocationModel(locationPhoto: "Ksamil", city: "Ksamil", country: "Albania", name1: "", name2: "Ksamil", description: "Crystal blue water beach"),
-    LocationModel(locationPhoto: "Green Coast", city: "Dhermi", country: "Albania", name1: "Green", name2: "Coast", description: "Beach villas & apartments"),
-    LocationModel(locationPhoto: "Zins", city: "Durres", country: "Albania", name1: "", name2: "Zins", description: "Hookah bar"),
-    LocationModel(locationPhoto: "Tirana", city: "Tirana", country: "Albania", name1: "", name2: "Tirana", description: "Capital city"),
-    LocationModel(locationPhoto: "Mrizi i Zanave", city: "Lezhë", country: "Albania", name1: "Mrizi", name2: "Zanave", description: "Traditional food restaurant"),
-    ]
-    
-    // MACEDONIA
-    var macedoniaLocations: [LocationModel] = [
-    LocationModel(locationPhoto: "SkopjeC", city: "Skopje", country: "North Macedonia", name1: "", name2: "Skopje", description: "Capital City"),
-    LocationModel(locationPhoto: "Ohrid", city: "Ohrid", country: "North Macedonia", name1: "", name2: "Ohrid", description: "Lake side city"),
-    LocationModel(locationPhoto: "Matka", city: "", country: "North Macedonia", name1: "Matka", name2: "Canyon", description: "Large canyon"),
-    LocationModel(locationPhoto: "Zoo", city: "Skopje", country: "North Macedonia", name1: "City", name2: "Zoo", description: "Large zoo in capital city")]
+    func getLocationsCountry(country: LocationCountry) -> [Location] {
+        return allLocations.filter { location in
+            location.country == country
+        }
+    }
 }
