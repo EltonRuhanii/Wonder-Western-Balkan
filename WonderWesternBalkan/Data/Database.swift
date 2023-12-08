@@ -9,12 +9,15 @@ import Foundation
 import CoreLocation
 
 class Database {
+    //TODO: Make number of destination responsive to the numer of locations in a country
+//    var macedoniaCount = Database().getLocationsCountry(country: .northMacedonia).count
+    
     // MARK: - COUNTRIES
     var countries: [Country] = [
-        Country(rating: 4.7, noOfLocations: 5, countryName: "Kosova", countryPhoto: "Kosova", countryLocations: "kosovaLocations"),
-        Country(rating: 4.8, noOfLocations: 4, countryName: "Albania", countryPhoto: "Albania", countryLocations: "albaniaLocations"),
-        Country(rating: 4.3, noOfLocations: 4, countryName: "Montenegro", countryPhoto: "Montenegro", countryLocations: "montengroLocations"),
-        Country(rating: 4.0, noOfLocations: 3, countryName: "North Macedonia", countryPhoto: "Macedonia", countryLocations: "macedoniaLocations")
+        Country(rating: 4.7, noOfLocations: 4, countryName: "Kosova", countryPhoto: "Kosova", countryLocations: "kosovaLocations"),
+        Country(rating: 4.8, noOfLocations: 5, countryName: "Albania", countryPhoto: "Albania", countryLocations: "albaniaLocations"),
+        Country(rating: 4.3, noOfLocations: 2, countryName: "Montenegro", countryPhoto: "Montenegro", countryLocations: "montengroLocations"),
+        Country(rating: 4.0, noOfLocations: 2, countryName: "North Macedonia", countryPhoto: "Macedonia", countryLocations: "macedoniaLocations")
     ]
     
     // MARK: - LOCATIONS

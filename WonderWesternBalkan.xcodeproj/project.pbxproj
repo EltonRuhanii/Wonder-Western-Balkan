@@ -25,6 +25,8 @@
 		5DA006E52A3918730085D898 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006E32A3918730085D898 /* LocationCell.swift */; };
 		5DA006E62A3918730085D898 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA006E42A3918730085D898 /* LocationCell.xib */; };
 		5DA006E82A391BB20085D898 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA006E72A391BB20085D898 /* CountryViewController.swift */; };
+		D834C5FF2B2314F800733B7E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D834C5FE2B2314F800733B7E /* MenuViewController.swift */; };
+		D834C6012B23645500733B7E /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D834C6002B23645500733B7E /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5DA006E32A3918730085D898 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		5DA006E42A3918730085D898 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		5DA006E72A391BB20085D898 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		D834C5FE2B2314F800733B7E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D834C6002B23645500733B7E /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				5DA006D02A3717B60085D898 /* HomeViewController.swift */,
 				5DA006E72A391BB20085D898 /* CountryViewController.swift */,
 				5D3B24872A53346100D06C34 /* ExploreViewController.swift */,
+				D834C5FE2B2314F800733B7E /* MenuViewController.swift */,
+				D834C6002B23645500733B7E /* TestVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -235,12 +241,14 @@
 				5DA006D32A3718690085D898 /* NavigationHelper.swift in Sources */,
 				5DA006B72A368AB70085D898 /* AppDelegate.swift in Sources */,
 				5DA006E12A37CD2D0085D898 /* CountryCell.swift in Sources */,
+				D834C5FF2B2314F800733B7E /* MenuViewController.swift in Sources */,
 				5DA006DA2A37CC480085D898 /* Country.swift in Sources */,
 				5DA006D72A3731A80085D898 /* RegisterCompletedViewController.swift in Sources */,
 				5DA006CF2A3711AE0085D898 /* AccountSetupViewController.swift in Sources */,
 				5DA006E52A3918730085D898 /* LocationCell.swift in Sources */,
 				5DA006B92A368AB70085D898 /* SceneDelegate.swift in Sources */,
 				5DA006DD2A37CC9C0085D898 /* Database.swift in Sources */,
+				D834C6012B23645500733B7E /* TestVC.swift in Sources */,
 				5DA006E82A391BB20085D898 /* CountryViewController.swift in Sources */,
 				5D3B24882A53346100D06C34 /* ExploreViewController.swift in Sources */,
 				5DA006D52A37193A0085D898 /* TermsViewController.swift in Sources */,

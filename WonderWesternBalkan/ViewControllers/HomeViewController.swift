@@ -65,15 +65,27 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             if location.countryLocations == "kosovaLocations" {
                 countryVC.country = .kosovo
                 countryVC.countryImageName = "KosovaC"
+                countryVC.countryName = "Kosovo"
+                countryVC.countryRating = location.rating
+                countryVC.countryDestinations = location.noOfLocations
             } else if location.countryLocations == "albaniaLocations" {
                 countryVC.country = .albania
                 countryVC.countryImageName = "AlbaniaC"
+                countryVC.countryName = "Albania"
+                countryVC.countryRating = location.rating
+                countryVC.countryDestinations = location.noOfLocations
             } else if location.countryLocations == "macedoniaLocations" {
                 countryVC.country = .northMacedonia
                 countryVC.countryImageName = "MacedoniaC"
+                countryVC.countryName = "North Macedonia"
+                countryVC.countryRating = location.rating
+                countryVC.countryDestinations = location.noOfLocations
             } else {
                 countryVC.country = .montenegro
                 countryVC.countryImageName = "MontenegroC"
+                countryVC.countryName = "Montenegro"
+                countryVC.countryRating = location.rating
+                countryVC.countryDestinations = location.noOfLocations
             }
             navigationController?.pushViewController(countryVC, animated: true)
         }

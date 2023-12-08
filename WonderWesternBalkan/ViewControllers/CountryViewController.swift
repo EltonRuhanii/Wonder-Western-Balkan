@@ -21,9 +21,12 @@ class CountryViewController: UIViewController {
     var middleColor: CGColor?
     var bottomColor: CGColor?
     var country: LocationCountry = .kosovo
-    var categroy: LocationCategory = .beach
+    var category: LocationCategory = .beach
     var countryImageName: String = ""
-    
+    var countryName: String = ""
+    var countryRating: Double = 0
+    var countryDestinations: Int = 0
+    var itemTapped: Int = 0
     
     // MARK: - BODY
     override func viewDidLoad() {
@@ -31,6 +34,7 @@ class CountryViewController: UIViewController {
         setupGradient()
         setupCollectionView()
         setupUIElements()
+        checkForSelectedCategory()
     }
     
     /// This function will change gradient colors when screen apparance is toggled
@@ -59,6 +63,18 @@ class CountryViewController: UIViewController {
 
 // MARK: - FUNCTIONS
 extension CountryViewController {
+    func checkForSelectedCategory() {
+        if itemTapped == 1 {
+            category = .cities
+        } else if itemTapped == 2 {
+            category = .beach
+        } else if itemTapped == 3 {
+            category = .mountains
+        } else if itemTapped == 4 {
+            category = .nightlife
+        }
+    }
+    
     func setupGradinetColors() {
         if traitCollection.userInterfaceStyle == .dark {
             topColor = UIColor(named: "Background")?.withAlphaComponent(0.2).cgColor
@@ -83,6 +99,9 @@ extension CountryViewController {
     
     func setupUIElements() {
         countryImage.image = UIImage(named: countryImageName)
+        countryLabel.text = countryName
+        ratingLabel.text = "Rated at \(countryRating)"
+        destinationsLabel.text = "Over \(countryDestinations) locations"
     }
 }
 
@@ -92,19 +111,26 @@ extension CountryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let location = Database().getLocationsCountry(country: country)
-        
-        return location.count
+        if itemTapped == 0 {
+            let location = Database().getLocationsCountry(country: country)
+            return location.count
+        } else {
+            let location = Database().getLocationsCategory(category: category)
+            return location.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LocationCell", for: indexPath) as! LocationCell
-        
-        let location = Database().getLocationsCountry(country: country)[indexPath.item]
-        
-        cell.locationName1.text = location.locationLabel
-        cell.cityImage.image = UIImage(named: location.locationLabel)
-
+        if itemTapped == 0 {
+            let location = Database().getLocationsCountry(country: country)[indexPath.item]
+            cell.locationName1.text = location.locationLabel
+            cell.cityImage.image = UIImage(named: location.locationLabel)
+        } else {
+            let location = Database().getLocationsCategory(category: category)[indexPath.item]
+            cell.locationName1.text = location.locationLabel
+            cell.cityImage.image = UIImage(named: location.locationLabel)
+        }
         return cell
     }
     

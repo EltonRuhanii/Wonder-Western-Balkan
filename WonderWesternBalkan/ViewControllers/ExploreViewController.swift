@@ -34,7 +34,7 @@ class ExploreViewController: UIViewController {
         setupIndicator()
         setupGradient()
         setupUI()
-        
+        checkIndicatorPostion()
     }
     
     /// This function will change gradient colors when screen apparance is toggled
@@ -52,6 +52,8 @@ class ExploreViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
     
     // Description & Location pressed
     @IBAction func descriptionPressed(_ sender: Any) {
@@ -91,8 +93,15 @@ extension ExploreViewController {
             descriptionButton.tintColor = UIColor(named: "Gray Text")
             locationButton.tintColor = UIColor(named: "Text")
         }
-        
-        // TODO: Change color/opacity when indicator is not in it's position
+    }
+    
+    // TODO: Change color/opacity when indicator is not in it's position
+    func checkIndicatorPostion() {
+        if indicator.frame.midX == descriptionButton.frame.midX || indicator.frame.midX == locationButton.frame.midX {
+            indicator.layer.opacity = 1
+        } else {
+            indicator.layer.opacity = 0.3
+        }
     }
     
     func setupGradinetColors() {
