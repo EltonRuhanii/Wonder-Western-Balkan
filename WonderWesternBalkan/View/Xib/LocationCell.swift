@@ -24,6 +24,7 @@ class LocationCell: UICollectionViewCell {
         viewHolder.layer.cornerRadius = 25
         cityImage.layer.cornerRadius = 25
         blurView.layer.cornerRadius = 25
+        blurView.clipsToBounds = true
     }
 
 }

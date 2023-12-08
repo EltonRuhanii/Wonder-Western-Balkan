@@ -48,6 +48,13 @@ class CountryViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    @IBAction func exploreButtonPressed(_ sender: Any) {
+        if let exploreVC = storyboard?.instantiateViewController(withIdentifier: "ExploreViewController") as? ExploreViewController {
+            navigationController?.pushViewController(exploreVC, animated: true)
+        }
+    }
 }
 
 // MARK: - FUNCTIONS

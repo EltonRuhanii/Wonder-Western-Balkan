@@ -85,12 +85,36 @@ class Database {
             locationLabel: "Venom",
             countryLabel: "Kosovo",
             historyLabel: "Venom is one of the biggest Night clubs in Kosovo, offering an awesome nightlife. With artist from all over the world. Big area, awesome music, and delicious cocktail’s. If you’re a nightlife person it’s a must visit club."),
-        Location(category: .nightlife, country: .albania, locationLabel: "Blloku", countryLabel: "Albania", historyLabel: "asds"),
-        Location(category: .nightlife, country: .montenegro, locationLabel: "Small Beach", countryLabel: "Montenegro", historyLabel: "dad")]
+        Location(
+            category: .nightlife,
+            country: .albania,
+            locationLabel: "Blloku",
+            countryLabel: "Albania",
+            historyLabel: "If you’re a night life person In Tirana you must visit Blloku, it’s an awesome area for bar’s. You’ll have an amazing time with the music and the people at Blloku."),
+        Location(
+            category: .nightlife,
+            country: .montenegro,
+            locationLabel: "Small Beach",
+            countryLabel: "Montenegro",
+            historyLabel: "The Small Beach in Ulcinj, Montenegro, is a charming coastal spot known for its intimate size and inviting atmosphere. Nestled along the Adriatic Sea, this beach offers a relaxed setting with soft sands and clear blue waters. A lot of night life activity after 9PM till the morning.")
+    ]
     
+    // MARK: - GET LOCATIONS FUNCTIONS
+    /// Get Locations by country - User selects a preferd country, functions return only locations of the selected country
+    /// - Parameter country: Selected country by user
+    /// - Returns: Only locations from that country
     func getLocationsCountry(country: LocationCountry) -> [Location] {
         return allLocations.filter { location in
             location.country == country
+        }
+    }
+    
+    /// Get locations by category - User selects a preferd category, functions return only location of the selected category
+    /// - Parameter category: Selected category by user
+    /// - Returns: Only lcoations from that category
+    func getLocationsCategory(category: LocationCategory) -> [Location] {
+        return allLocations.filter { location in
+            location.category == category
         }
     }
 }

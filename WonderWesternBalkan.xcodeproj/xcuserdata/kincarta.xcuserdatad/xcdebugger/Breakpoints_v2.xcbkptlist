@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F5AB8142-1CF3-4998-AB36-8BA8073B9873"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "693E7DAA-8198-4D22-9882-CD1A66EF681B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderWesternBalkan/ViewControllers/ExploreViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "setupIndicator()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "693E7DAA-8198-4D22-9882-CD1A66EF681B - dfb471e8bad8bcb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.ExploreViewController.setupIndicator() -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kincarta/Developer/Elton%20Ruhani/Wonder-Western-Balkan/WonderWesternBalkan/ViewControllers/ExploreViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "991">
+               </Location>
+               <Location
+                  uuid = "693E7DAA-8198-4D22-9882-CD1A66EF681B - dfb471e8bad8bcb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderWesternBalkan.ExploreViewController.setupIndicator() -&gt; ()"
+                  moduleName = "WonderWesternBalkan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kincarta/Developer/Elton%20Ruhani/Wonder-Western-Balkan/WonderWesternBalkan/ViewControllers/ExploreViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "712">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1974F1D8-30EB-4609-9050-83093061208D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderWesternBalkan/ViewControllers/ExploreViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "backButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -14,14 +14,16 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var ratingView: UIVisualEffectView!
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var cityDescription: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var bookButton: UIButton!
+    @IBOutlet weak var indicator: UIView!
+    @IBOutlet weak var descriptionButton: UIButton!
+    @IBOutlet weak var locationButton: UIButton!
     
     // Variables
     let gradientLayer = CAGradientLayer()
     var topColor: CGColor?
     var middleColor: CGColor?
     var bottomColor: CGColor?
+    var descriptionStatus: Bool = true
     
     // Models
     var locationModel = Location.self
@@ -29,8 +31,10 @@ class ExploreViewController: UIViewController {
     // MARK: - BODY
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupIndicator()
         setupGradient()
         setupUI()
+        
     }
     
     /// This function will change gradient colors when screen apparance is toggled
@@ -44,13 +48,51 @@ class ExploreViewController: UIViewController {
                setupGradinetColors()
            }
        }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    // Description & Location pressed
+    @IBAction func descriptionPressed(_ sender: Any) {
+        descriptionStatus = true
+        UIView.animate(withDuration: 0.5) {
+            self.setupIndicator()
+        }
+    }
+    
+    @IBAction func locationPressed(_ sender: Any) {
+        descriptionStatus = false
+        UIView.animate(withDuration: 0.5) {
+            self.setupIndicator()
+        }
+    }
 }
 
 // MARK: - FUNCTIONS
 extension ExploreViewController {
     func setupUI() {
         ratingView.layer.cornerRadius = ratingView.frame.height / 2
-        bookButton.layer.cornerRadius = bookButton.frame.height / 2
+        indicator.layer.cornerRadius = indicator.frame.width / 2
+    }
+    
+    func setupIndicator() {
+        // setup postions
+        let indicatorLeft: CGFloat = descriptionButton.frame.midX - 2.5
+        let indicatorRight: CGFloat = locationButton.frame.midX - 2.5
+        
+        // move indicator
+        if descriptionStatus == true {
+            indicator.frame = CGRect(x: indicatorLeft, y: 0, width: 5, height: 5)
+            descriptionButton.tintColor = UIColor(named: "Text")
+            locationButton.tintColor = UIColor(named: "Gray Text")
+        } else {
+            indicator.frame = CGRect(x: indicatorRight, y: 0, width: 5, height: 5)
+            descriptionButton.tintColor = UIColor(named: "Gray Text")
+            locationButton.tintColor = UIColor(named: "Text")
+        }
+        
+        // TODO: Change color/opacity when indicator is not in it's position
     }
     
     func setupGradinetColors() {
